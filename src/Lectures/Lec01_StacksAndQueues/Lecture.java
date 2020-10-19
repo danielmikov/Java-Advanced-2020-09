@@ -78,5 +78,12 @@ public class Lecture {
         System.out.println(mix02.peek());
 
         System.out.println();
+
+        boolean isTrue = false;
+        if (scanner.nextLine().equals("1")){
+            isTrue = true;
+        }
+        // easy boolean
+        System.out.println(isTrue ? "true" : "false");
     }
 }
