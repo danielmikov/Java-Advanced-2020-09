@@ -16,6 +16,7 @@ public class Ex02_SetsOfElements {
         populateSetFromScanner(scanner, set1Size, set1);
         populateSetFromScanner(scanner, set2Size, set2);
 
+        // should have used set1.retainAll(set2); print set1;
         if (set1Size>set2Size){
             for (int element : set2) {
                 if (set1.contains(element)){
