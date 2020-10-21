@@ -1,4 +1,4 @@
-package Exercies.Ex01_ReverseNumbersWithAStack;
+package Exercies.Ex04_ReverseNumbersWithAStack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

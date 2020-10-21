@@ -1,4 +1,4 @@
-package Lectures.Lec01_StacksAndQueues;
+package Lectures.Lec03_StacksAndQueues;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

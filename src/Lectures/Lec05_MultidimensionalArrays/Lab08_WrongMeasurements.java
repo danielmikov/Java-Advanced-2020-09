@@ -1,4 +1,4 @@
-package Lectures.Lec02_MultidimensionalArrays;
+package Lectures.Lec05_MultidimensionalArrays;
 
 import java.util.Scanner;
 
