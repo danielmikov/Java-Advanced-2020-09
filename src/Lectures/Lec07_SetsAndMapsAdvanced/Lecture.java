@@ -1,33 +1,94 @@
 package Lectures.Lec07_SetsAndMapsAdvanced;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Lecture {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Set<String> strings = new TreeSet<>();
+        //initialize set
+        Set<String> namesSet = new TreeSet<>();
+        namesSet.add("Pesho");
 
-        strings.add("Pesho");
-        System.out.println(strings.size());
-        strings.add("carcinomas motorists high");
-        System.out.println(strings.size());
-        strings.add("where inattentive agronomy");
-        System.out.println(strings.size());
-        strings.add("drumwood boulderhead");
-        System.out.println(strings.size());
-        strings.add("1");
-        System.out.println(strings.size());
-        strings.add("drumwood boulderhead");
-        System.out.println(strings.size());
+        printStringSet(namesSet);
 
-        for (String st : strings) {
-            System.out.println(st);
+        //stream set from String
+
+        String input = "15 8 13 9 45 3 18 6 15";
+
+        //HashSet
+        Set<Integer> intSet = Arrays
+                .stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .boxed()
+                .collect(Collectors.toSet());
+
+        System.out.println("Set");
+        printIntegerSet(intSet);
+
+        //HasSet
+        Set<Integer> integerHashSet = Arrays
+                .stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)   //// int[]
+                .boxed()
+                .collect(Collectors.toCollection(HashSet::new));
+
+        Set<Integer> integerHashSet2 = Arrays
+                .stream(scanner.nextLine().split("\\s+"))
+                .map(Integer::parseInt)  /////Integer[]
+                .collect(Collectors.toCollection(HashSet::new));
+
+        System.out.println("HashSet");
+        printIntegerSet(integerHashSet);
+
+        //TreeHashSet
+        Set<Integer> integerTreeSet = Arrays
+                .stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .boxed()
+                .collect(Collectors.toCollection(TreeSet::new));
+
+        System.out.println("TreeHashSet");
+        printIntegerSet(integerTreeSet);
+
+        //LinkedHashSet
+        Set<Integer> intLinkedHasSet = Arrays
+                .stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .boxed()
+                .collect(Collectors.toCollection(LinkedHashSet::new));
+
+        System.out.println("LinkedHashSet");
+        printIntegerSet(intLinkedHasSet);
+
+
+        //////////////////
+        // Maps
+
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("Pesho", 5);
+        hashMap.put("Gosho", 2);
+        hashMap.put("Lili", 6);
+    }
+
+    public static void printStringSet(Set<String> setStrings) {
+        setStrings.forEach(System.out::print);
+        System.out.println();
+    }
+
+    public static void printIntegerSet(Set<Integer> setNumbers) {
+        for (int number : setNumbers) {
+            System.out.print(number + " ");
         }
+        System.out.println();
+    }
 
+    public static void printIntegerSetWithHash(Set<Integer> setNumbers) {
+        for (int number : setNumbers) {
+            System.out.print(number + " ");
+            System.out.println(String.valueOf(number).hashCode());
+        }
         System.out.println();
     }
 }
