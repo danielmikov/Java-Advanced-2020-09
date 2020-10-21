@@ -1,4 +1,4 @@
-package Exercies.Ex08_SetsAndMapsAdvanced;
+package Exercises.Ex08_SetsAndMapsAdvanced;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

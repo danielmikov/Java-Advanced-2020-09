@@ -1,4 +1,4 @@
-package Exercies.Ex04_ReverseNumbersWithAStack;
+package Exercises.Ex04_ReverseNumbersWithAStack;
 
 import java.util.Scanner;
 

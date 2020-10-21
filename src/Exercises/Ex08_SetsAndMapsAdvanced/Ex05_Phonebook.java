@@ -1,4 +1,4 @@
-package Exercies.Ex08_SetsAndMapsAdvanced;
+package Exercises.Ex08_SetsAndMapsAdvanced;
 
 import java.util.Scanner;
 import java.util.TreeMap;
