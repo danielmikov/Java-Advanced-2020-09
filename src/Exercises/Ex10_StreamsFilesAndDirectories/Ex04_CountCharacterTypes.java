@@ -9,9 +9,13 @@ import java.nio.file.Path;
 
 public class Ex04_CountCharacterTypes {
     public static void main(String[] args) throws IOException {
-        Path pathIn = Path.of("H:\\Documents\\SoftUni\\Java Advanced - 2020-09\\src\\Exercises\\Ex10_StreamsFilesAndDirectories\\Resources\\StreamsFilesDirectories\\input.txt");
+        Path pathIn = Path.of("H:\\Documents\\SoftUni\\Java Advanced - 2020-09\\src\\Exercises" +
+                "\\Ex10_StreamsFilesAndDirectories\\Resources\\StreamsFilesDirectories" +
+                "\\input.txt");
 
-        PrintWriter printWriter = new PrintWriter("H:\\Documents\\SoftUni\\Java Advanced - 2020-09\\src\\Exercises\\Ex10_StreamsFilesAndDirectories\\Resources\\StreamsFilesDirectories\\output_Ex04.txt");
+        PrintWriter printWriter = new PrintWriter("H:\\Documents\\SoftUni\\Java Advanced - 2020-09" +
+                "\\src\\Exercises\\Ex10_StreamsFilesAndDirectories\\Resources\\StreamsFilesDirectories" +
+                "\\output_Ex04.txt");
 
         int vowels = 0;
         int consonants = 0;
